@@ -7,7 +7,7 @@ loader.style.display ="none"
 
 
 document.querySelector('.fa-bars').addEventListener('click', function() {
-    document.querySelector('nav ul').classList.toggle('show');
+    document.querySelector('nav ul').classList.toggle('open');
 });
 let slideIndex = 0;
 showSlides();
@@ -67,10 +67,14 @@ function switchToArabic() {
   document.getElementById('mn').innerText = 'علي محمد صالح';
   document.getElementById('mp').innerText = 'مدير مدرسة الامام علي الثانوية والذي شغل هذا المنصب منذ عام 2015 حتى يومنا هذا حيث بسبب له، أصبحت مدرسة الإمام علي من أفضل المدارس الإعدادية في العراق ومحافظة بابل بشكل خاص.. منذ ذلك الحين وصول السيد علي محمد صالح وإلى يومنا هذا فازت مدرسة الإمام علي الإعدادية بالمركز الأول أربع مرات والمركز الثاني مرة واحدة حيث تنافست المدرسة الإعدادية الجامعية على هذا المركز.';
   document.getElementById('s').innerText = 'بعض الاسماء الامعه في الثانوية';
+  document.getElementById('name').innerText = 'الاسم';
+    // Set document direction to right-to-left
+    document.documentElement.dir = 'rtl';
   // Add more translations as needed
   
   // Update current language
   currentLanguage = 'arabic';
+
 }
 
 // Function to switch language to English
@@ -90,6 +94,10 @@ function switchToEnglish() {
   document.getElementById('mn').innerText = 'Ali Mohmmed Saleh';
   document.getElementById('mp').innerText = 'Director of Imam Ali Secondary School, who held the position from 2015 until the present day, where because ofhim, Imam Ali became one of the best preparatory schools in Iraq and Babil Governorate in particular..Since the arrival of Mr. Ali Muhammad Saleh and to this day, Imam Ali Preparatory School has won first place four timesand second place once, as it competed with University Preparatory School for this position.';
   document.getElementById('s').innerText ='Some Of Our Teachers';
+  document.getElementById('name').innerText = 'Name';
+    // Set document direction to ltr
+    document.documentElement.dir = 'ltr';
+
   // Add more translations as needed
   
   // Update current language

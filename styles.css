@@ -266,6 +266,7 @@ input {
 
 }
 
+
 .en,
 .ar {
 
@@ -343,3 +344,82 @@ h4 {
 
 
 }
+.hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+  }
+  
+  .menu-slider {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: right 0.3s ease;
+  }
+  
+  .menu-slider nav {
+    padding-top: 50px;
+  }
+  
+  .menu-slider ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu-slider li {
+    padding: 10px;
+  }
+  
+  .menu-slider a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .open-slide {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+  }
+  
+  .slide-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    display: none;
+  }
+  
+  .slide-navbar nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+  }
+  
+  .slide-navbar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .slide-navbar li {
+    margin-bottom: 20px;
+  }
+  
+  .slide-navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  

@@ -73,6 +73,30 @@ hide.onclick = function(){
             
           
           }
+          document.addEventListener("DOMContentLoaded", function() {
+            var openSlideBtn = document.querySelector(".open-slide");
+            var menuSlider = document.querySelector(".menu-slider");
+            var slideNavbar = document.getElementById("slide-navbar");
+          
+            openSlideBtn.addEventListener("click", function() {
+              var menuSliderRight = window.getComputedStyle(menuSlider).getPropertyValue("right");
+              if (menuSliderRight === "0px") {
+                menuSlider.style.right = "-250px";
+                slideNavbar.style.display = "none";
+              } else {
+                menuSlider.style.right = "0";
+                slideNavbar.style.display = "block";
+              }
+            });
+          
+            document.addEventListener("click", function(event) {
+              if (!event.target.closest(".menu-slider") && !event.target.closest(".open-slide") && !event.target.closest("#slide-navbar")) {
+                menuSlider.style.right = "-250px";
+                slideNavbar.style.display = "none";
+              }
+            });
+          });
+          
 
 
 
