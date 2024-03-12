@@ -14,16 +14,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
     rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.min.css">
 </head>
 
 <body>
 
   <div class="loader" id="loader"></div>
   <header>
-   
+
     <div class="background-image">
     </div>
     <div class="header-content">
@@ -31,38 +32,43 @@
       <button>
         <a href="/test.html" id="join">Join Now</a>
       </button>
-       <div class="language-selector">
-      <select id="language-select">
-        <option value="english">English</option>
-        <option value="arabic">العربية</option>
-      </select>
-    </div>
+      <div class="language-selector">
+        <select id="language-select">
+          <option value="english">English</option>
+          <option value="arabic">العربية</option>
+        </select>
+      </div>
 
     </div>
 
+    <!-- Display Username after Login -->
+    <div id="loggedInUser" class="user-name">
+      <span cla>مدرسة الأمام علي (ع)</span>
+    </div>
 
-    <div class="user-name" id="name">Name</div> 
-   
     <nav>
       <button class="fas fa-bars hamburger" onclick="toggleMenu()"> </button>
       <ul>
-    
-        <li><a href="#" id="menu">Home</a></li>
-        <li><a href="#" id="About">About</a></li>
-        <li><a href="#" id="contact">Contact</a></li>
+
+        <li><a href="#menu" id="menu">Home</a></li>
+        <li><a href="#a1" id="About">About</a></li>
+        <li><a href="./contactus.html" id="contact">Contact</a></li>
+        <li><a href="./lib.html" id="lib">Library</a></li>
+        <li><a href="./Other-teaachers.html" id="techers-info">Our Teachers</a></li>
       </ul>
-     
-  
+
+
     </nav>
-  
+
   </header>
 
   <main>
 
-    
+
     <div class="content" id="aboutus">
       <h2><a class="a" href="" target="_blank" rel="link" id="a1">Who Are We ?</a></h2>
-      <p id="p1">Imam Ali High School stands as a witness to the educational victory. Located at the heart of our community, it
+      <p id="p1">Imam Ali High School stands as a witness to the educational victory. Located at the heart of our
+        community, it
         radiates success in every aspect. Despite its humble beginnings, Imam Ali High School has risen to remarkable
         heights, producing outstanding scholars year after year.
         What distinguishes Imam Ali High School is its unwavering dedication to student growth and achievement. Through
@@ -75,7 +81,7 @@
       </p>
     </div>
     <div class="content">
-      <h2><a class="a" href=""  id="a2">What Is Our Idea About success?</a></h2>
+      <h2><a class="a" href="" id="a2">What Is Our Idea About success?</a></h2>
       <p id="p2">
 
         Imam Ali High School, located within a vibrant community, embodies educational achievement. With an emphasis on
@@ -93,7 +99,8 @@
         Al-Imam Ali High School envisions a learning environment where every student achieves academic excellence,
         personal growth, and contributes positively to society.Mission Statement:
         Our mission is to provide a nurturing and inclusive educational experience that fosters critical thinking,
-        creativity, and social responsibility, empowering students to become lifelong learners and compassionate leaders.</p>
+        creativity, and social responsibility, empowering students to become lifelong learners and compassionate
+        leaders.</p>
     </div>
 
   </main>
@@ -101,75 +108,90 @@
   <div class="manager-card">
     <img src="img/المدير.png" alt="Manager Image" class="manager-image">
     <div class="manager-details">
-        <h2 class="manager-name" id="mn">Ali Mohemmed Saleh</h2>
-        <p class="manager-lorem" id="mp">
+      <h2 class="manager-name" id="mn">Ali Mohemmed Saleh</h2>
+      <p class="manager-lorem" id="mp">
         Director of Imam Ali Secondary School, who held the position from 2015 until the present day, where because of
         him, Imam Ali became one of the best preparatory schools in Iraq and Babil Governorate in particular..Since the
         arrival of Mr. Ali Muhammad Saleh and to this day, Imam Ali Preparatory School has won first place four times
         and second place once, as it competed with University Preparatory School for this position.
-        </p>
+      </p>
     </div>
-</div>
+  </div>
 
 
 
 
   <br><br><br>
 
+  <div class="main-content">
 
 
-  <div class="slider">
-    <label class="h1-best"  id="s">Some Of Our Teachers</label>
-    <!-- Slide 1 -->
-    <div class="slider-item">
-      <img src="img/حيدلا.png" alt="Photo 1">
-      <h2>Dr.Haider</h2>
-      <p>One of the best teachers in Babylon Governorate and holds a doctorate degree</p>
-    </div>
-    <!-- Slide 2 -->
-    <div class="slider-item">
-      <img src="img/حسين.jpg" alt="Photo 2">
-      <h2>Hussien Al-temime</h2>
-      <p>One of the best physics teachers in Babylon</p>
-    </div>
-    <!-- Slide 3 -->
-    <div class="slider-item">
-      <img src="img/سيفي.png" alt="Photo 3">
-      <h2>Saif Hussien</h2>
-      <p>One of the best chemistry teachers in Babylon</p>
-    </div>
-    <!-- Slide 4 -->
-    <div class="slider-item">
-      <img src="img/صادق.png" alt="Photo 4">
-      <h2>Sadeq</h2>
-      <p>One of the best computer language teachers in Babylon</p>
-    </div>
 
+
+
+
+    <div class="slider">
+      <label class="h1-best" id="s">Some Of Our Teachers</label>
+      <!-- Slide 1 -->
+      <div class="slider-item">
+        <img src="img/حيدلا.png" alt="Photo 1">
+        <h2>Dr.Haider</h2>
+        <p>One of the best teachers in Babylon Governorate and holds a doctorate degree</p>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slider-item">
+        <img src="img/حسين.jpg" alt="Photo 2">
+        <h2>Hussien Al-temime</h2>
+        <p>One of the best physics teachers in Babylon</p>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slider-item">
+        <img src="img/سيفي.png" alt="Photo 3">
+        <h2>Saif Hussien</h2>
+        <p>One of the best chemistry teachers in Babylon</p>
+      </div>
+      <!-- Slide 4 -->
+      <div class="slider-item">
+        <img src="img/صادق.png" alt="Photo 4">
+        <h2>Sadeq</h2>
+        <p>One of the best computer language teachers in Babylon</p>
+      </div>
+      <div class="button-container">
+        <a href="./Other-teaachers.html" class="other-teachers-btn">Other Teachers</a>
+      </div>
+
+
+
+    </div>
   </div>
-
-
-
-
-
-
-
-
-
   <footer>
-    <footer>
-
-      <p>&copy; 2024 Al-Imam Ali High School | <a href="#menu">Menu</a> | <a href="#About">About</a> | <a
-          href="#aboutus">Who Are We ?</a> | <a href="#contact">Contact</a></p>
-    </footer>
-
-
-
+    <div class="container">
+      <p>&copy; 2024 Al-Imam Ali High School. All rights reserved.</p>
+      <div class="social-media">
+        <a href="https://www.facebook.com/profile.php?id=100063539748113" class="social-icon"><i
+            class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
   </footer>
 
+<script src="js.js"></script>
+  <script src="app.js">
 
 
+  </script>
 
-  <script src="app.js"></script>
+
+  <script>
+    // Retrieve username from localStorage
+    var loggedInUser = localStorage.getItem("loggedInUser");
+
+    // Update the content
+    document.getElementById("displayUsername").textContent = loggedInUser;
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>

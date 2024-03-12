@@ -1,109 +1,132 @@
 const eye = document.getElementById("univisible");
 const hide = document.getElementById("invisible");
-const loginbtn = document.querySelector('.login-button');
-const password = document.querySelector('input-password');   
-const pass = document.getElementById('pass');
-const user = document.getElementById('user-name-input'); 
+const loginbtn = document.querySelector(".login-button");
+const password = document.querySelector("input-password");
 
-eye.onclick = function(){
-eye.classList.toggle('active');
+const pass = document.getElementById("pass");
+const userName = document.getElementById("user-name-input");
 
-    hide.classList.toggle('show');
-    document.getElementById('pass').type = 'text';
+eye.onclick = function () {
+  eye.classList.toggle("active");
+
+  hide.classList.toggle("show");
+  document.getElementById("pass").type = "text";
 };
-hide.onclick = function(){
-    eye.classList.remove('active');
-    
-        hide.classList.remove('show');
-        document.getElementById('pass').type = 'password';
-    };
+hide.onclick = function () {
+  eye.classList.remove("active");
 
-    loginbtn.addEventListener("click", event =>{
-        verifyUserName()
-        verifyPassword()
-        
+  hide.classList.remove("show");
+  document.getElementById("pass").type = "password";
+};
 
-     
-      
+loginbtn.addEventListener("click", (event) => {
+  verifyUserName();
+  verifyPassword();
+});
+function verifyPassword() {
+  var pw = document.getElementById("pass").value;
+  //check empty password field
+  if (pw == "") {
+    document.getElementById("message").innerHTML =
+      "**Fill the password please!";
+    return false;
+  }
 
-        });
-        function verifyPassword() {  
-            var pw =document.getElementById('pass').value;
-            //check empty password field  
-            if(pw == "") {  
-               document.getElementById("message").innerHTML = "**Fill the password please!";  
-               return false;  
-            }  
-             
-           //minimum password length validation  
-            if(pw.length < 8) {  
-               document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";  
-               return false;  
-            }  
-            
-          //maximum length of password validation  
-            if(pw.length > 15) {  
-               document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";  
-               return false;  
-            } else {  
-                document.getElementById("message").innerHTML = "" 
-               alert("Password is correct");  
-            }  
-          };
-          //user-name
-          function verifyUserName() {  
-            var user=document.getElementById('user-name-input').value;
-            //check empty user field  
-            if(user == "") {  
-               document.getElementById("message1").innerHTML = "**Fill the UserName please!";  
-               return false;  
-            }  
-             
-           //minimum user length validation  
-            if(user.length < 4) {  
-               document.getElementById("message1").innerHTML = "**UserNmae length must be atleast 4 characters";
-               document.getElementById("message1").style.color="#d70101";
-            }  
+  //minimum password length validation
+  if (pw.length < 8) {
+    document.getElementById("message").innerHTML =
+      "**Password length must be atleast 8 characters";
+    return false;
+  }
 
-            if(user.length >  4) {  
-                document.getElementById("message1").innerHTML = "Done";
-                document.getElementById("message1").style.color="#96d701";  
-                return false;  
-             }
-            
-          
-          }
-          document.addEventListener("DOMContentLoaded", function() {
-            var openSlideBtn = document.querySelector(".open-slide");
-            var menuSlider = document.querySelector(".menu-slider");
-            var slideNavbar = document.getElementById("slide-navbar");
-          
-            openSlideBtn.addEventListener("click", function() {
-              var menuSliderRight = window.getComputedStyle(menuSlider).getPropertyValue("right");
-              if (menuSliderRight === "0px") {
-                menuSlider.style.right = "-250px";
-                slideNavbar.style.display = "none";
-              } else {
-                menuSlider.style.right = "0";
-                slideNavbar.style.display = "block";
-              }
-            });
-          
-            document.addEventListener("click", function(event) {
-              if (!event.target.closest(".menu-slider") && !event.target.closest(".open-slide") && !event.target.closest("#slide-navbar")) {
-                menuSlider.style.right = "-250px";
-                slideNavbar.style.display = "none";
-              }
-            });
-          });
-          
+  //maximum length of password validation
+  if (pw.length > 15) {
+    document.getElementById("message").innerHTML =
+      "**Password length must not exceed 15 characters";
+    return false;
+  } else {
+    document.getElementById("message").innerHTML = "";
+  
+  }
+}
+//user-name
+function verifyUserName() {
+  var userName = document.getElementById("user-name-input").value;
+  //check empty user field
+  if (user == "") {
+    document.getElementById("message1").innerHTML =
+      "**Fill the UserName please!";
+    return false;
+  }
 
+  //minimum user length validation
+  if (user.length < 4) {
+    document.getElementById("message1").innerHTML =
+      "**UserNmae length must be atleast 4 characters";
+    document.getElementById("message1").style.color = "#d70101";
+  }
 
+  if (user.length > 4) {
+    document.getElementById("message1").innerHTML = "Done";
+    document.getElementById("message1").style.color = "#96d701";
+    return false;
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  var openSlideBtn = document.querySelector(".open-slide");
+  var menuSlider = document.querySelector(".menu-slider");
+  var slideNavbar = document.getElementById("slide-navbar");
 
-   
+  openSlideBtn.addEventListener("click", function () {
+    var menuSliderRight = window
+      .getComputedStyle(menuSlider)
+      .getPropertyValue("right");
+    if (menuSliderRight === "0px") {
+      menuSlider.style.right = "-250px";
+      slideNavbar.style.display = "none";
+    } else {
+      menuSlider.style.right = "0";
+      slideNavbar.style.display = "block";
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    if (
+      !event.target.closest(".menu-slider") &&
+      !event.target.closest(".open-slide") &&
+      !event.target.closest("#slide-navbar")
+    ) {
+      menuSlider.style.right = "-250px";
+      slideNavbar.style.display = "none";
+    }
+  });
+});
+
+usernamwe ={
+  name1 :"ali",
+  pas1:"12345678",
+  name2:"mohmmed",
+  pas2:"87654321"
+}
+
+function login() {
+  user = userName.value;
+  Password = pass.value;
+  if (user == usernamwe.name1 && Password == usernamwe.pas1) {
+
+    localStorage.setItem("loggedInUser", user);
+
+var newWindow = window.open("index.html", "_blank");
+document.getElementById("displayUsername").textContent = user;
+document.getElementById("loggedInUser").style.display = "block";
  
-        
+  } else {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Something went wrong!",
+      footer: '<a href="./index.html">Why do I have this issue?</a>'
+    });
+  }
+};
 
-       
-            
-           
