@@ -17,13 +17,13 @@
 </head>
 
 <body>
-    <div class="p-0 m-0 container-fluid">
+    <div class="container">
         <div class="hamburger-menu">
             <div class="menu-slider">
                 <nav>
                     <ul>
                         <li><a href="./index.html">Home</a></li>
-                     
+                        <li><a href="#">Services</a></li>
                         <li><a href="./contactus.html">Contact</a></li>
                     </ul>
                 </nav>
@@ -39,35 +39,22 @@
 
             <div class="login-form">
                 <span class="span1">
-                    <label class="user-name-lable">Username <h6 style="color: #be1e1e ;margin: 5px ;font-size: 15px;">*
-                        </h6></label>
+                    <form action="login.php" method="post">
 
-                    <input class="user-name-input" id="user-name-input" type="text">
-                    <label id="message1"></label>
-
-
-
-                    <label class="password-lable" data-118="passowrd">password <h6
-                            style="color: #be1e1e;margin: 5px ;font-size: 15px;">*
-                        </h6></label>
-                    <div class="pas-eye">
-                        <input class="pasword-input" id="pass" type="password" value="">
-
-                        <div class="eye">
-                            <i class="fas fa-eye" id="univisible" style="color: #000000;"></i>
-                            <i class="fa-solid fa-eye-low-vision" id="invisible"></i>
-
+                        <input class="user-name-input" id="user-name-input" type="text" name="username"
+                            placeholder="Username">
+                        <label id="message1"></label>
+                        <div class="pas-eye">
+                            <input class="pasword-input" id="pass" name="password"
+                                placeholder="Password">
+                            <div class="eye">
+                                <i class="fas fa-eye" id="univisible" style="color: #000000;"></i>
+                                <i class="fa-solid fa-eye-low-vision" id="invisible"></i>
+                            </div>
                         </div>
-
-                    </div>
-                    <label id="message"></label>
-
-
-
-                    <button class="login-button" data-118="login" id="login-button" onclick="login()"><a
-                            href="#">login</a> </button>
-                    <a href="/resestpassword" class="forget-password" data-118="forget">Forget the password?</a>
-
+                        <label id="message"></label>
+                        <button type="submit" name="submit" class="login-btn">Login</button>
+                        <a href="/resestpassword" class="forget-password" data-118="forget">Forget the password?</a>
                 </span>
 
             </div>
@@ -88,10 +75,10 @@
 
 
         </div>
-
+        </form>
         <div class="right-side">
 
-            <label class="right-side-label">The Best High School In The<b>World</b> </label>
+
 
 
 

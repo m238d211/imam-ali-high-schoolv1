@@ -63,11 +63,10 @@ languageSelect.addEventListener("change", function () {
 var arabicBtn = document.getElementById("arabic-btn");
 var englishBtn = document.getElementById("english-btn");
 
-// Set initial language to English
-var currentLanguage = "english";
-
 // Function to switch language to Arabic
 function switchToArabic() {
+  document.documentElement.dir = "rtl";
+  document.getElementById("techers").innerText ="معلومات المدرسين";
   document.documentElement.dir = "rtl";
   // Add Arabic translations here
   document.getElementById("menu").innerText = "الصفحة الرئيسية";
@@ -90,15 +89,23 @@ function switchToArabic() {
     "مدير مدرسة الامام علي الثانوية والذي شغل هذا المنصب منذ عام 2015 حتى يومنا هذا حيث بسبب له، أصبحت مدرسة الإمام علي من أفضل المدارس الإعدادية في العراق ومحافظة بابل بشكل خاص.. منذ ذلك الحين وصول السيد علي محمد صالح وإلى يومنا هذا فازت مدرسة الإمام علي الإعدادية بالمركز الأول أربع مرات والمركز الثاني مرة واحدة حيث تنافست المدرسة الإعدادية الجامعية على هذا المركز.";
   document.getElementById("s").innerText = "بعض الاسماء الامعه في الثانوية";
   document.getElementById("lib").innerText = "المكتبة";
-  document.getElementById("lib").innerText = "المكتبة";
+  document.getElementById("Other").innerText="باقي المدرسين";
+ 
 
   // Update current language
   currentLanguage = "arabic";
+  // Add Arabic translations here
+  // Rest of your translation code
+
+  // Save language choice to local storage
+  localStorage.setItem("language", "arabic");
 }
 
 // Function to switch language to English
 function switchToEnglish() {
   document.documentElement.dir = "ltr";
+  
+
   // Add English translations here
   document.getElementById("menu").innerText = "Home";
   document.getElementById("join").innerText = "Join Now";
@@ -120,13 +127,30 @@ function switchToEnglish() {
     "Director of Imam Ali Secondary School, who held the position from 2015 until the present day, where because ofhim, Imam Ali became one of the best preparatory schools in Iraq and Babil Governorate in particular..Since the arrival of Mr. Ali Muhammad Saleh and to this day, Imam Ali Preparatory School has won first place four timesand second place once, as it competed with University Preparatory School for this position.";
   document.getElementById("s").innerText = "Some Of Our Teachers";
   document.getElementById("lib").innerText = "Library";
+  document.getElementById("techers").innerText="Our Teachers";
+  document.getElementById("Other").innerText="Other Teachers";
   // Set document direction to ltr
 
   // Add more translations as needed
 
   // Update current language
   currentLanguage = "english";
+  // Add English translations here
+  // Rest of your translation code
+
+  // Save language choice to local storage
+  localStorage.setItem("language", "english");
 }
+
+// Check local storage for language preference on page load
+window.addEventListener("load", function() {
+  const savedLanguage = localStorage.getItem("language");
+  if (savedLanguage === "arabic") {
+    switchToArabic();
+  } else {
+    switchToEnglish(); // Default to English if no preference is saved
+  }
+});
 
 // Event listeners for language selector buttons
 arabicBtn.addEventListener("click", function () {
