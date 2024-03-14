@@ -3,8 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ececec;
-
-    font-family: "Reem Kufi", sans-serif;
+    font-family: "Mada", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
@@ -15,14 +14,97 @@ header {
     text-align: center;
     padding: 50px 0;
     height: 300px;
+    font-family: "Reem Kufi", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
 
 
 }
+/* span-logo */
+.logo-span{
+display: flex;
+width: 60px;
+height: 60px;
+
+align-items: center;
+margin: 20px;
+border-radius: 50%;
+justify-content: center;
+
+}
+.logo-span img {
+    width: auto;
+    max-height:50px ;
+}
+
+/* slide nav bar */
+
+.column-nav {
+position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: -250px; /* Initially hidden */
+    width: 250px;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+    backdrop-filter: blur(10px);
+    transition: left 0.3s ease;
+  }
+  
+  .column-nav.show {
+    left: 0; /* Slide in when visible */
+
+  }
+  .column-nav ul {
+display: flex;
+flex-direction: column;
+padding:10px;
+
+  }
+  .column-nav ul li{
+
+    padding: 20px;
+  }
+  @media screen and (max-width: 768px){
+.column-nav{
+    background-color: transparent;
+    left: -150px;
+    top: 300px; /* Initially hidden */
+    width: 250px;
+display: none;
+    height: 100px;
+
+}
+
+
+
+.column-nav.show {
+display: block;
+
+/* Fallback color */
+background-color: transparent;
+/* Black w/opacity/see-through */
+
+  }
+  .column-nav.show ul li a {
+    color: #ffffff;
+  }
+    
+  }
+  
+
+  
+  
 
 /* languge */
 
 .language-selector {
-    margin-top: 10px;
+    margin-top: 5px;
     z-index: 99999;
     display: flex;
     justify-content: center;
@@ -39,22 +121,16 @@ header {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
-
-    padding: 10px 20px;
-    border: 1px solid #ffae00;
+    color: aliceblue;
     border-radius: 5px;
     background-color: transparent;
-    font-size: 20px;
-
     cursor: pointer;
-
-    box-shadow: 0 8px 20px rgba(252, 149, 4, 0.611);
     text-align: center;
 
 }
 
 #language-select option {
-    color: #0e0d0d;
+
     background-color: rgb(0, 0, 0);
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
@@ -219,7 +295,8 @@ nav {
     z-index: 99;
     /* Ensure nav is above the background image */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
@@ -562,7 +639,7 @@ footer {
 .slider-item {
     display: none;
     text-align: center;
- 
+
 }
 
 /* Adjusting image size for PC */
@@ -622,7 +699,7 @@ footer {
         text-align: center;
         color: #6b24ce;
         font-size: 30px;
-        padding: 10px;
+       padding: 5px;
     }
 
     .manager-card .manager-lorem {
@@ -636,6 +713,7 @@ footer {
     /* Adjust image size for mobile phones */
     .slider-item img {
         max-height: 250px;
+
     }
 
     .h1-best {
@@ -647,6 +725,7 @@ footer {
 
 
 }
+
 
 .h1-best {
     display: flex;
@@ -676,7 +755,7 @@ footer {
 .manager-image {
     width: 550px;
     /* Adjust image width */
-    height: auto;
+    height:500px;
     border-radius: 5%;
     /* Round image corners */
     margin-right: 20px;
@@ -705,6 +784,14 @@ footer {
     line-height: 2rem;
     width: auto;
     max-width: 100%;
+}
+@media only screen and (max-width: 576px) {
+   .manager-image{
+width: auto;
+max-width: 100%;
+border-radius: 0px;
+
+   } 
 }
 
 

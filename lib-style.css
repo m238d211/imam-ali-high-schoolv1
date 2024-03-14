@@ -22,7 +22,9 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+  
     padding: 20px;
+
 
 }
 
@@ -35,6 +37,7 @@ section {
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.3s ease-in-out;
+    margin-top: 200px;
 }
 
 section:hover {
@@ -62,7 +65,18 @@ p {
     color: #7f8c8d;
 }
 
+
 button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+button a {
     margin-top: 15px;
     padding: 10px 20px;
     background-color: #3498db;
