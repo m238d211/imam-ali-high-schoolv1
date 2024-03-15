@@ -135,6 +135,7 @@ function switchToEnglish() {
   document.getElementById("6-grade").innerText="6th-Grade";
   document.getElementById("5-grade").innerText="5th-Grade";
   document.getElementById("4-grade").innerText="4th-Grade";
+  document.getElementById("Other").innerText="Other Teacher's";
 
 
   // Update current language
