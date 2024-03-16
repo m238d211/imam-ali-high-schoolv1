@@ -51,7 +51,8 @@ function showSlides() {
 
     slideTimeout = setTimeout(showSlides, 3000); // Change image every 3 seconds
   }
-}
+};
+const tickerContent = document.querySelector('.ticker-content');
 
 // Get reference to language select element
 var languageSelect = document.getElementById("language-select");
@@ -72,7 +73,10 @@ var englishBtn = document.getElementById("english-btn");
 
 // Function to switch language to Arabic
 function switchToArabic() {
+  
   document.documentElement.dir = "rtl";
+  tickerContent.style.animationDirection = 'reverse';
+  languageSelect.value = 'arabic';
   document.querySelector("ticker-content");
   document.getElementById("techers").innerText ="معلومات المدرسين";
 
@@ -106,6 +110,7 @@ function switchToArabic() {
   document.getElementById("ticker-3").innerText="تكريم الطلاب الفائزين في مسابقه كره القدم داخل الاعداديه";
   document.getElementById("ticker-4").innerText="حضور محافظ محافظه بابل وقاده الاجهزه الامنيه لزياره اعداديه الامام علي وتكريم الطلبه المتفوقين";
   document.getElementById("ticker-5").innerText="اعلن مدير اعداديه الامام علي علي محمد صالح عن اسماء الطلبه المتفوقين للسنه الدراسية ٢٠٢٣-٢٠٢٤ ";
+
   
  
 
@@ -121,7 +126,7 @@ function switchToArabic() {
 // Function to switch language to English
 function switchToEnglish() {
   document.documentElement.dir = "ltr";
- 
+  tickerContent.style.animationDirection = 'normal';
 
   // Add English translations here
   document.getElementById("menu").innerText = "Home";
@@ -189,15 +194,3 @@ englishBtn.addEventListener("click", function () {
 //report
 
 
-function changeLanguage() {
-
-  const tickerContent = document.querySelector('.ticker-content');
-
-  if (languageSelect.value === 'arabic') {
-    tickerContent.style.animationDirection = 'reverse';
-    document.documentElement.setAttribute('lang', 'ar');
-  } else {
-    tickerContent.style.animationDirection = 'normal';
-    document.documentElement.setAttribute('lang', 'en');
-  }
-}
