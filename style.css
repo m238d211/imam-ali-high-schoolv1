@@ -122,6 +122,7 @@ header {
 
 
 
+
 }
 
 #language-select {
@@ -132,7 +133,11 @@ header {
     font-style: normal;
     color: aliceblue;
     border-radius: 5px;
-    background-color: transparent;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+    backdrop-filter: blur(10px);
     cursor: pointer;
     text-align: center;
 
@@ -147,9 +152,15 @@ header {
     backdrop-filter: blur(10px);
 }
 
-#language-select:focus {
+#language-select option:hover {
     outline: none;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+    backdrop-filter: blur(10px);
 }
+
 
 
 /* styles.css */
@@ -618,10 +629,12 @@ footer {
     flex-wrap: nowrap;
 
 
+
 }
 
 
 .slider {
+
     width: 100%;
     overflow: hidden;
     margin: 20px auto;
@@ -753,6 +766,7 @@ footer {
 .manager-card {
     display: flex;
     align-items: center;
+
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -762,9 +776,11 @@ footer {
 }
 
 .manager-image {
-    width: 550px;
+    margin-left: 20px;
+    width: auto;
+    max-width: 100%;
     /* Adjust image width */
-    height: 500px;
+    height: 800px;
     border-radius: 5%;
     /* Round image corners */
     margin-right: 20px;
@@ -784,12 +800,14 @@ footer {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 50px;
-    color: #333333;
+    color: #6b24ce;
 }
 
 .manager-lorem {
-    color: #666666;
-    font-size: 16px;
+    color: #000000;
+    padding-top: 5px;
+    font-weight: 800 ;
+    font-size: 20px;
     line-height: 2rem;
     width: auto;
     max-width: 100%;
@@ -909,7 +927,8 @@ footer {
     width: 100%;
     overflow: hidden;
     position: relative;
-    background-color: #f9f9f9;
+    background-color: #6b24ce;
+
     border-bottom: 1px solid #ccc;
 }
 
@@ -918,18 +937,21 @@ footer {
     white-space: nowrap;
     text-align: center;
 
-    animation: ticker 25s linear infinite;
+    animation: ticker 40s linear infinite;
 }
 
 .ticker-item {
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   font-weight: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Lalezar", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 15px;
     display: inline-block;
     padding: 10px 20px;
     box-sizing: border-box;
     border-right: 1px solid #ccc;
-    color: #ff0707;
-    font-size: 20px;
+    color: #ffffff;
+    font-size: 30px;
     text-align: center;
 }
 
@@ -942,8 +964,11 @@ footer {
         transform: translateX(-100%);
     }
 }
-@media only screen and (max-width: 768px){
-.ticker-content{
-    animation: ticker 35s linear infinite;
+
+@media only screen and (max-width: 768px) {
+    .ticker-content {
+        animation: ticker 45s linear infinite;
+    }
 }
-};
+
+;
