@@ -73,8 +73,9 @@ var englishBtn = document.getElementById("english-btn");
 // Function to switch language to Arabic
 function switchToArabic() {
   document.documentElement.dir = "rtl";
+  document.querySelector("ticker-content");
   document.getElementById("techers").innerText ="معلومات المدرسين";
-  document.documentElement.dir = "rtl";
+
   // Add Arabic translations here
   document.getElementById("menu").innerText = "الصفحة الرئيسية";
   document.getElementById("join").innerText = "انضم الأن";
@@ -120,7 +121,7 @@ function switchToArabic() {
 // Function to switch language to English
 function switchToEnglish() {
   document.documentElement.dir = "ltr";
-  
+ 
 
   // Add English translations here
   document.getElementById("menu").innerText = "Home";
@@ -184,4 +185,19 @@ englishBtn.addEventListener("click", function () {
     switchToEnglish();
   }
 });
+
 //report
+
+
+function changeLanguage() {
+
+  const tickerContent = document.querySelector('.ticker-content');
+
+  if (languageSelect.value === 'arabic') {
+    tickerContent.style.animationDirection = 'reverse';
+    document.documentElement.setAttribute('lang', 'ar');
+  } else {
+    tickerContent.style.animationDirection = 'normal';
+    document.documentElement.setAttribute('lang', 'en');
+  }
+}
