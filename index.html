@@ -24,7 +24,7 @@
 
   <div class="loader" id="loader"></div>
   <header>
-<!-- HTML -->
+    <!-- HTML -->
 
 
     <div class="background-image">
@@ -38,7 +38,7 @@
 
     </div>
 
-   
+
 
     <nav>
       <button class="fas fa-bars hamburger" onclick="toggleMenu()"> </button>
@@ -49,7 +49,7 @@
         <li><a href="#a1" id="About">About</a></li>
         <li><a href="./contactus.html" id="contact">Contact</a></li>
 
-        <li id="library"> 
+        <li id="library">
           <a href="#" onclick="toggleLibrary()" id="lib">Library<i class="fa-solid fa-arrow-down"></i></a>
           <nav class="column-nav" id="nestedNav"> <!-- New column navigation bar -->
             <ul>
@@ -58,7 +58,7 @@
               <li><a href="./lib-grades/4th-Grade-lib.html" id="4-grade">4th-Grade</a></li>
             </ul>
           </nav>
-          
+
         </li>
         <li><a href="./Other-teaachers.html" id="techers">Our Teachers</a></li>
         <div class="language-selector">
@@ -68,13 +68,29 @@
           </select>
         </div>
       </ul>
-      <span class="logo-span"><img src="./img/logo.png" alt="logo" srcset="./img/logo.png" ></span>
+      <span class="logo-span"><img src="./img/logo.png" alt="logo" srcset="./img/logo.png"></span>
 
     </nav>
 
+
   </header>
 
+
+
+  <div class="news-ticker">
+    <div class="ticker-content">
+      <div class="ticker-item"id="ticker-1" >Breaking News: Imam Ali Preparatory School won second place in the annual Boy Scouts camp</div>
+      <div class="ticker-item"id="ticker-2" >New Feature Release: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+      <div class="ticker-item"id="ticker-3" ></div>
+      <div class="ticker-item"id="ticker-4" ></div>
+      <div class="ticker-item"id="ticker-5" ></div>
+    </div>
+  </div>
+
+
+
   <main>
+
 
 
     <div class="content" id="aboutus">
@@ -133,6 +149,7 @@
 
 
 
+
   <br><br><br>
 
   <div class="main-content">
@@ -176,7 +193,9 @@
 
     </div>
   </div>
+
   <footer>
+
     <div class="container">
       <p>&copy; 2024 Al-Imam Ali High School. All rights reserved.</p>
       <div class="social-media">
@@ -187,19 +206,48 @@
         <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
+
   </footer>
+
+
   <script>
+
     function toggleLibrary() {
       var nestedNav = document.getElementById('nestedNav');
       nestedNav.classList.toggle('show');
     }
   </script>
-  
 
-<script src="js.js"></script>
+
+  <script src="js.js"></script>
   <script src="app.js">
 
 
+  </script>
+
+<script>
+  let currentNewsIndex = 0;
+  const newsFeed = document.querySelector('.news-feed');
+  const newsItems = document.querySelectorAll('.news-item');
+  
+  function prevNews() {
+    if (currentNewsIndex > 0) {
+      currentNewsIndex--;
+      updateNewsPosition();
+    }
+  }
+  
+  function nextNews() {
+    if (currentNewsIndex < newsItems.length - 1) {
+      currentNewsIndex++;
+      updateNewsPosition();
+    }
+  }
+  
+  function updateNewsPosition() {
+    const newsWidth = newsFeed.clientWidth;
+    newsFeed.style.transform = `translateX(-${currentNewsIndex * newsWidth}px)`;
+  }
   </script>
 
 

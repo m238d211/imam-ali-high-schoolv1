@@ -1,4 +1,11 @@
-// script.js
+
+
+function updateNewsPosition() {
+  const newsWidth = newsItems[currentNewsIndex].offsetWidth;
+  newsList.style.transform = `translateX(-${currentNewsIndex * newsWidth}px)`;
+}
+
+
 var loader = document.getElementById("loader");
 window.addEventListener("load", function () {
   loader.style.display = "none";
@@ -93,6 +100,11 @@ function switchToArabic() {
   document.getElementById("6-grade").innerText=" الصف السادس علمي";
   document.getElementById("5-grade").innerText="الصف الخامس علمي";
   document.getElementById("4-grade").innerText="الصف الرابع علمي";
+  document.getElementById('ticker-1').innerText="فازت اعداديه الامام علي بالمركز الثاني في مخيم الكشافه السنوي";
+  document.getElementById("ticker-2").innerText="شاركت اعداديه الامام علي في مسابقه السنوية لمادة الحاسوب";
+  document.getElementById("ticker-3").innerText="تكريم الطلاب الفائزين في مسابقه كره القدم داخل الاعداديه";
+  document.getElementById("ticker-4").innerText="حضور محافظ محافظه بابل وقاده الاجهزه الامنيه لزياره اعداديه الامام علي وتكريم الطلبه المتفوقين";
+  document.getElementById("ticker-5").innerText="اعلن مدير اعداديه الامام علي علي محمد صالح عن اسماء الطلبه المتفوقين للسنه الدراسية ٢٠٢٣-٢٠٢٤ ";
   
  
 
@@ -136,8 +148,11 @@ function switchToEnglish() {
   document.getElementById("5-grade").innerText="5th-Grade";
   document.getElementById("4-grade").innerText="4th-Grade";
   document.getElementById("Other").innerText="Other Teacher's";
-
-
+  document.getElementById('ticker-1').innerText="Imam Ali Preparatory School won second place in the annual Boy Scouts camp";
+  document.getElementById("ticker-2").innerText="Imam Ali Preparatory School participated in the annual computer competition";
+  document.getElementById("ticker-3").innerText="Honoring the students who won the football competition within the middle school";
+  document.getElementById("ticker-4").innerText="The presence of the Governor of Babylon Governorate and the leaders of the security services to visit Imam Ali Preparatory School and honor the outstanding students";
+  document.getElementById("ticker-5").innerText="The director of Imam Ali Preparatory School, Ali Muhammad Saleh, announced the names of the outstanding students for the academic year 2023-2024.";
   // Update current language
   currentLanguage = "english";
   // Add English translations here
@@ -169,3 +184,4 @@ englishBtn.addEventListener("click", function () {
     switchToEnglish();
   }
 });
+//report
